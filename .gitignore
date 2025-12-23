@@ -1,0 +1,17 @@
+# логи и временные файлы
+*.log
+*.ini
+*.pdf
+*.txt
+*.pptx
+*.mp4
+*.webm
+*.7z
+*.zip
+*.url
+	
+# зависимости
+node_modules/
+
+# разное
+.vscode/
