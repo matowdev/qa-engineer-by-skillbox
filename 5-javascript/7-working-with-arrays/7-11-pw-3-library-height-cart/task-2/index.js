@@ -57,7 +57,8 @@ renderHeightsList(heights); // !! запуск отрисовки
 
 // ** фильтрация списка/роста учеников
 function filterHeights(heightsArr, filterHeight) {
-  renderHeightsList(heightsArr.filter((height) => height >= filterHeight)); // фильтрация
+  const filteredArr = heightsArr.filter((height) => height >= filterHeight); // фильтрация (через return/доп. переменную, т.к. данный метод не мутирует исходный массив)
+  return filteredArr;
 }
 
 // ** обработка/проверка вводимого значения/роста
@@ -117,5 +118,6 @@ filterBtn.addEventListener('click', () => {
     return;
   }
 
-  filterHeights(heights, height); // запуск фильтрации списка/роста учеников
+  const filtered = filterHeights(heights, height); // фильтрация списка/роста учеников
+  renderHeightsList(filtered); // последующая отрисовки/перерисовка (уже отфильтрованного массива)
 });

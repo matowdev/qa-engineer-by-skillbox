@@ -1,1 +1,88 @@
+html {
+  box-sizing: border-box;
+}
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  padding: 30px;
+  height: auto;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  margin-bottom: 20px;
+  width: fit-content;
+  font-weight: 600;
+}
+
+.btns-wrap {
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-weight: 500;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(110%);
+}
+
+.add-btn {
+  margin-right: 10px;
+  color: #fff;
+  background: #459b52;
+}
+
+.cart-list {
+  width: fit-content;
+}
+
+.cart-item {
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+.cart-item:not(:last-child) {
+  margin-bottom: 5px;
+}
