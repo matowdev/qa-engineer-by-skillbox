@@ -79,7 +79,7 @@ function findBooks(booksArr, bookName) {
 
   if (index !== -1) {
     const allItems = document.querySelectorAll('.books-item');
-    allItems[index].classList.add('highlighted'); // выделение книги/элемента через родителя
+    allItems[index].classList.add('highlighted'); // выделение книги/элемента через индекс
   } else {
     alert('Книга не найдена!');
   }
