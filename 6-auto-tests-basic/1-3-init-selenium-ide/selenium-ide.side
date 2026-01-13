@@ -1,0 +1,108 @@
+{
+  "id": "1ea760ef-59c5-4be8-b6b6-8c18b300a4ab",
+  "version": "2.0",
+  "name": "selenium-ide",
+  "url": "https://lm.skillbox.cc",
+  "tests": [{
+    "id": "7cefcb98-024a-47c3-9789-46538e4541fd",
+    "name": "1-test",
+    "commands": [{
+      "id": "f96fbbba-24dd-42af-aaf5-822973cc2c92",
+      "comment": "",
+      "command": "open",
+      "target": "/qa_tester/module05/practice1/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1850eafb-9a9e-4070-9cab-936f5c23daa1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2576x1408",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f5fae5d-e930-4d13-b13a-6c83ea7de227",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e814e0a6-1f69-4e5b-bd64-9bcc99fe4e3f",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "test@mail.com"
+    }, {
+      "id": "e91ee05a-126e-419b-aa59-2d2863a8fd6d",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//p[2]/input", "xpath:position"]
+      ],
+      "value": "1111"
+    }, {
+      "id": "df3b3a90-b955-4ef1-8947-adf15f792847",
+      "comment": "",
+      "command": "type",
+      "target": "id=confirm_password",
+      "targets": [
+        ["id=confirm_password", "id"],
+        ["name=confirm_password", "name"],
+        ["css=#confirm_password", "css:finder"],
+        ["xpath=//input[@id='confirm_password']", "xpath:attributes"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": "1111"
+    }, {
+      "id": "c6ee1be3-72c8-48eb-ab89-df2ea142539d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-submit",
+      "targets": [
+        ["css=.form-submit", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Зарегистрироваться')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd1ac8e4-3941-4a55-b10b-ec528193fc03",
+      "comment": "",
+      "command": "click",
+      "target": "css=.content",
+      "targets": [
+        ["css=.content", "css:finder"],
+        ["xpath=//main", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "e2fa18fa-e798-4305-bab3-1d7b14b21b85",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7cefcb98-024a-47c3-9789-46538e4541fd"]
+  }],
+  "urls": ["https://lm.skillbox.cc/"],
+  "plugins": []
+}
