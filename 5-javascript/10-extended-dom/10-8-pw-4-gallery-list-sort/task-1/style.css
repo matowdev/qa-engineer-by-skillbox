@@ -41,4 +41,30 @@ img {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  background: #1e1e1e;
+}
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.gallery-list {
+  display: flex;
+  column-gap: 20px;
+  max-width: 900px;
+}
+
+.gallery-item {
+  cursor: pointer;
+}
+
+.gallery-img {
+  display: block;
+}
+
+.gallery-preview {
+  width: 1200px;
+  height: 800px;
 }
