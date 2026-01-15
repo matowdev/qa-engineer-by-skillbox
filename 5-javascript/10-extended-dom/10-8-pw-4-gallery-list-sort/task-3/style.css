@@ -15,17 +15,10 @@ h3,
 h4,
 h5,
 h6,
-p,
-ol,
-ul {
+p {
   margin: 0;
   padding: 0;
   font-weight: normal;
-}
-
-ol,
-ul {
-  list-style: none;
 }
 
 img {
@@ -41,4 +34,35 @@ img {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+.price-list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.price-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.btns-wrap {
+  width: fit-content;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  background: #d6d6da;
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: brightness(105%);
+}
+
+.btn-sort-up {
+  margin-right: 10px;
 }
