@@ -14,6 +14,70 @@
 </head>
 
 <body class="page">
+  <h1 class="page__header">Форма опроса</h1>
+  <form class="form page__form" id="form" action="#" method="get">
+    <!-- name input -->
+    <div class="form__input-wrap name-wrap">
+      <label class="form__label name-label" for="text">Имя пользователя:</label>
+      <input class="form__input name-input" id="text" type="text" name="name" minlength="3" maxlength="25"
+        pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$" title="Введите корректное имя" autocomplete="off" required>
+    </div>
+    <!-- email input -->
+    <div class="form__input-wrap email-wrap">
+      <label class="form__label email-label" for="email">Email:</label>
+      <input class="form__input email-input" id="email" type="email" name="email" minlength="10" maxlength="55"
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Введите корректный Email" autocomplete="off"
+        required>
+    </div>
+    <!-- radio-group -->
+    <div class="form__input-wrap radio-wrap">
+      <span class="form__info radio-info">Пол:</span>
+      <div class="form__option-wrap radio-option">
+        <input class="form__input radio-input" id="radio-male" type="radio" name="gender" value="male">
+        <label class="form__label radio-label" for="radio-male">Мужской</label>
+      </div>
+      <div class="form__option-wrap radio-option">
+        <input class="form__input radio-input" id="radio-female" type="radio" name="gender" value="female">
+        <label class="form__label radio-label" for="radio-female">Женский</label>
+      </div>
+    </div>
+    <!-- range input -->
+    <div class="form__input-wrap range-wrap">
+      <label class="form__label range-label" for="range">Оценка сервиса:</label>
+      <div class="form__range-input-wrap">
+        <input class="form__input range-input" id="range" type="range" name="rating" min="0" max="10" step="1"
+          value="5">
+        <span class="form__info range-info" id="range-value">5</span>
+      </div>
+    </div>
+    <!-- checkbox-group -->
+    <div class="form__input-wrap checkbox-wrap">
+      <span class="form__info checkbox-info">Интересы пользователя:</span>
+      <div class="form__option-wrap checkbox-option">
+        <input class="form__input checkbox-input" id="checkbox-sport" type="checkbox" name="sport">
+        <label class="form__label checkbox-label" for="checkbox-sport">Спорт</label>
+      </div>
+      <div class="form__option-wrap checkbox-option">
+        <input class="form__input checkbox-input" id="checkbox-music" type="checkbox" name="music">
+        <label class="form__label checkbox-label" for="checkbox-music">Музыка</label>
+      </div>
+      <div class="form__option-wrap checkbox-option">
+        <input class="form__input checkbox-input" id="checkbox-travel" type="checkbox" name="travel">
+        <label class="form__label checkbox-label" for="checkbox-travel">Путешествия</label>
+      </div>
+      <div class="form__option-wrap checkbox-option">
+        <input class="form__input checkbox-input" id="checkbox-movie" type="checkbox" name="movie">
+        <label class="form__label checkbox-label" for="checkbox-movie">Кино</label>
+      </div>
+    </div>
+    <!-- textarea -->
+    <div class="form__textarea-wrap">
+      <label class="form__label textarea-label" for="textarea">Дополнительные комментарии:</label>
+      <textarea class="form__textarea" id="textarea" name="textarea" title="Добавьте комментарий"></textarea>
+    </div>
+    <!-- submit -->
+    <button class="form__btn submit-btn" type="submit">Отправить</button>
+  </form>
 </body>
 
 </html>
