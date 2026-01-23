@@ -14,6 +14,41 @@
 </head>
 
 <body class="page">
+  <h1 class="page__header">Калькулятор стоимости доставки</h1>
+  <!-- form -->
+  <form class="form page__form" id="form" action="#" method="get" novalidate>
+    <div class="form__input-wrap name-wrap">
+      <label class="form__label product-label" for="product">Названеи товара:</label>
+      <input class="form__input product-input" id="product" type="text" name="product" minlength="3" maxlength="25"
+        pattern="^[a-zA-Zа-яА-ЯёЁ0-9\s\-]+$" autocomplete="off" required>
+    </div>
+    <div class="form__input-wrap weight-wrap">
+      <label class="form__label weight-label" for="weight">Вес товара (кг):</label>
+      <input class="form__input weight-input" id="weight" type="number" name="weight" step="0.1" min="0" max="999"
+        placeholder="0" required>
+    </div>
+    <div class="form__input-wrap distance-wrap">
+      <label class="form__label distance-label" for="distance">Расстояние доставки (км):</label>
+      <input class="form__input distance-input" id="distance" type="number" name="distance" step="1" min="0" max="10000"
+        placeholder="0" required>
+    </div>
+    <button class="form__btn submit-btn" type="submit">Добавить товар</button>
+  </form>
+  <!-- error message -->
+  <p class="page__message error-message hidden" id="error-message">Пожалуйста, введите корректные
+    значения для названия товара, веса и/или расстояния.</p>
+  <!-- table -->
+  <table class="product-table page__table" id="product-table">
+    <thead class="product-table__head">
+      <tr class="product-table__row header-row">
+        <th class="product-table__header">Название товара</th>
+        <th class="product-table__header">Вес (кг)</th>
+        <th class="product-table__header">Расстояние (км)</th>
+        <th class="product-table__header">Стоимость доставки</th>
+      </tr>
+    </thead>
+    <tbody class="product-table__body" id="table-body"></tbody>
+  </table>
 </body>
 
 </html>

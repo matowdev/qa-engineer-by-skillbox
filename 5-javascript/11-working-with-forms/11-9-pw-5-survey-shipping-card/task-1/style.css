@@ -53,6 +53,7 @@ img {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
+  margin-bottom: 30px;
   width: 100%;
   max-width: 350px;
 }
@@ -76,6 +77,7 @@ img {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
+  caret-color: #3d52a1;
 }
 
 .name-input,
@@ -164,4 +166,20 @@ img {
   max-width: 130px;
   color: #fff;
   background: #3d52a1;
+}
+
+.result-container {
+  width: 100%;
+  max-width: 350px;
+}
+
+.result-container__header {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  color: #459b52;
+}
+
+.result-container__info:not(:last-child) {
+  margin-bottom: 10px;
 }

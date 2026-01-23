@@ -49,18 +49,17 @@ form.addEventListener('submit', (event) => {
   }
 
   const resultContainer = document.createElement('div');
-  resultContainer.id = 'result-container';
-  resultContainer.style.marginTop = '30px';
-  resultContainer.style.maxWidth = '350px';
+  resultContainer.classList.add('result-container', 'page__result-container');
+  resultContainer.setAttribute('id', 'result-container');
 
   resultContainer.innerHTML = `
-    <h2 style="margin-bottom: 20px; font-weight: 600; font-size: 24px; color: #459b52">Результаты опроса:</h2>
-    <p style="margin-bottom: 10px;"><b>Имя пользователя:</b> ${name}</p>
-    <p style="margin-bottom: 10px;"><b>Email:</b> ${email}</p>
-    <p style="margin-bottom: 10px;"><b>Пол:</b> ${genderText}</p>
-    <p style="margin-bottom: 10px;"><b>Оценка сервиса:</b> ${rating}</p>
-    <p style="margin-bottom: 10px;"><b>Интересы пользователя:</b> ${interestsResult}</p>
-    <p style="margin-bottom: 10px;"><b>Дополнительные комментарии:</b> ${comment ? comment : 'Нет комментариев'}</p>
+    <h2 class="result-container__header">Результаты опроса:</h2>
+    <p class="result-container__info"><b>Имя пользователя:</b> ${name}</p>
+    <p class="result-container__info"><b>Email:</b> ${email}</p>
+    <p class="result-container__info"><b>Пол:</b> ${genderText}</p>
+    <p class="result-container__info"><b>Оценка сервиса:</b> ${rating}</p>
+    <p class="result-container__info"><b>Интересы пользователя:</b> ${interestsResult}</p>
+    <p class="result-container__info"><b>Дополнительные комментарии:</b> ${comment ? comment : 'Нет комментариев'}</p>
   `;
 
   form.after(resultContainer);
