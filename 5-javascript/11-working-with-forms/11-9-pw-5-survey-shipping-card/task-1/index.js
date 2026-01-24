@@ -13,7 +13,7 @@ rangeInput.addEventListener('input', () => {
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const name = document.getElementById('text').value;
+  const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
 
   const genderInput = form.querySelector('input[name="gender"]:checked');

@@ -14,6 +14,28 @@
 </head>
 
 <body class="page">
+  <h1 class="page__header">Оформление банковской карты</h1>
+  <div class="card card-design page__design-block">
+    <!-- text input -->
+    <div class="card__input-wrap info-wrap">
+      <label class="card__label info-label" for="info">Данные карты:</label>
+      <input class="card__input info-input" id="info" type="text" name="info" minlength="3" maxlength="19"
+        pattern="^[a-zA-Zа-яА-ЯёЁ0-9\s\-]+$" autocomplete="off" required>
+    </div>
+    <!-- select/options -->
+    <div class="card__select-wrap select-options-wrap">
+      <label class="card__label select-label" for="select-options">Цвет карты:</label>
+      <select class="card__select select-options" id="select-options" name="color-options">
+        <option value="#9e9e9e">По умолчанию.. Серый</option>
+        <option value="#d32f2f">Красный</option>
+        <option value="#1976d2">Синий</option>
+        <option value="#388e3c">Зелёный</option>
+      </select>
+    </div>
+  </div>
+  <div class="card-preview page__preview-block">
+    <p class="card-preview__info" id="card-preview-info">BANK CARD</p>
+  </div>
 </body>
 
 </html>
