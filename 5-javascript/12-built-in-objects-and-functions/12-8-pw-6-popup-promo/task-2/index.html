@@ -14,6 +14,18 @@
 </head>
 
 <body class="page">
+  <div class="promo page__promo">
+    <div class="promo__card">
+      <form class="promo__form" id="form" action="#" method="get">
+        <div class="promo__input-group">
+          <input class="promo__input" id="promocode" type="text" name="promocode" minlength="4" maxlength="10"
+            pattern="^[a-zA-Zа-яА-ЯёЁ0-9\s\-]+$" placeholder="ПРОМОКОД" autocomplete="off" required>
+          <button class="promo__btn" type="submit">Применить</button>
+        </div>
+        <p class="promo__status"></p>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
