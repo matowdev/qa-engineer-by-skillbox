@@ -1,0 +1,145 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  padding: 30px;
+  height: auto;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #333;
+  background: #f4f4f4;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #999;
+}
+
+.title-wrap,
+.genre-wrap {
+  margin-bottom: 10px;
+}
+
+.year-wrap,
+.checkbox-wrap {
+  margin-bottom: 15px;
+}
+
+.title-label,
+.genre-label,
+.year-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #3d52a1;
+}
+
+.title-input,
+.genre-input,
+.year-input {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  caret-color: #e62908;
+}
+
+.viewed-input,
+.viewed-label {
+  cursor: pointer;
+}
+
+.form__btn {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  background: transparent;
+  cursor: pointer;
+}
+
+.form__btn:hover {
+  filter: brightness(115%);
+}
+
+.submit-btn {
+  width: 100%;
+  max-width: 140px;
+  color: #fff;
+  background: #3d52a1;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 900px;
+  font-size: 16px;
+  background: #fff;
+  box-shadow: 0 0 5px #999;
+}
+
+.table,
+.table__header,
+.table__cell {
+  border: 1px solid #ccc;
+}
+
+.table__header,
+.table__cell {
+  padding: 10px;
+  text-align: left;
+}
+
+.table__header {
+  font-weight: bold;
+  background-color: #e9e8e8;
+}
