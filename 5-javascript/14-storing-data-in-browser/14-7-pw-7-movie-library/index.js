@@ -63,15 +63,15 @@ function renderFilmsTable() {
     const viewedText = film.viewed ? 'Да' : 'Нет';
 
     bodyRow.innerHTML = `
-    <td class="table__cell">${film.title}</td>
-    <td class="table__cell">${film.genre}</td>
-    <td class="table__cell">${film.year}</td>
-    <td class="table__cell">${viewedText}</td>
-    <td class="table__cell">
-      <button class="action-btn action-edit" data-action="edit" data-id="${film.id}">Редактировать</button>
-      <button class="action-btn action-delete" data-action="delete" data-id="${film.id}">Удалить</button>
-    </td>
-  `;
+      <td class="table__cell">${film.title}</td>
+      <td class="table__cell">${film.genre}</td>
+      <td class="table__cell">${film.year}</td>
+      <td class="table__cell">${viewedText}</td>
+      <td class="table__cell">
+        <button class="action-btn action-edit" data-action="edit" data-id="${film.id}">Редактировать</button>
+        <button class="action-btn action-delete" data-action="delete" data-id="${film.id}">Удалить</button>
+      </td>
+   `;
 
     tableBody.append(bodyRow);
   });
