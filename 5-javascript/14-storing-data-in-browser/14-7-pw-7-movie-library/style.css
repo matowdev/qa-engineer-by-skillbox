@@ -34,6 +34,9 @@ img {
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 30px;
   height: auto;
   min-height: 100vh;
@@ -95,6 +98,12 @@ img {
   cursor: pointer;
 }
 
+.form__btns-wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
 .form__btn {
   border: none;
   border-radius: 5px;
@@ -105,6 +114,7 @@ img {
   font-style: normal;
   background: transparent;
   cursor: pointer;
+  transition: filter 0.3s ease-in-out;
 }
 
 .form__btn:hover {
@@ -116,6 +126,56 @@ img {
   max-width: 140px;
   color: #fff;
   background: #3d52a1;
+}
+
+.cancel-btn {
+  width: 100%;
+  max-width: 280px;
+  color: #fff;
+  background: #858585;
+}
+
+.sort-wrap {
+  display: flex;
+  row-gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.sort-select {
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.sort-btn {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  width: 100%;
+  max-width: 140px;
+  color: #333;
+  background: transparent;
+  cursor: pointer;
+  transition-property: border-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.sort-btn:hover {
+  border-color: #3d52a1;
+  color: #3d52a1;
 }
 
 .table {
@@ -142,4 +202,31 @@ img {
 .table__header {
   font-weight: bold;
   background-color: #e9e8e8;
+}
+
+.action-btn {
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  background: #f8f9fa;
+  cursor: pointer;
+  transition-property: border-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.action-edit:hover {
+  border-color: #757575;
+  color: #616161;
+}
+
+.action-delete:hover {
+  border-color: #af2911;
+  color: #af2911;
+}
+
+.hidden {
+  display: none !important;
 }
