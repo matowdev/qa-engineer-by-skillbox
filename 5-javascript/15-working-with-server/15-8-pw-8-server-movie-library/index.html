@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PW #8. Task, "Server movie library"</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./index.js" defer></script>
+</head>
+
+<body class="page" id="page">
+  <!-- form -->
+  <form class="form page__form" id="form" action="#" method="get">
+    <div class="form__input-wrap title-wrap">
+      <label class="form__label title-label" for="title">Название:</label>
+      <input class="form__input title-input" id="title" type="text" name="title" maxlength="55"
+        pattern="^[a-zA-Zа-яА-ЯёЁ0-9\s\-]+$" autocomplete="off" required>
+    </div>
+    <div class="form__input-wrap genre-wrap">
+      <label class="form__label genre-label" for="genre">Жанр:</label>
+      <input class="form__input genre-input" id="genre" type="text" name="genre" maxlength="55"
+        pattern="^[a-zA-Zа-яА-ЯёЁ0-9\s\-]+$" autocomplete="off" required>
+    </div>
+    <div class="form__input-wrap year-wrap">
+      <label class="form__label year-label" for="year">Год:</label>
+      <input class="form__input year-input" id="year" type="number" name="year" step="1" max="2050" required>
+    </div>
+    <div class="form__input-wrap checkbox-wrap">
+      <div class="form__option-wrap checkbox-option">
+        <input class="form__input viewed-input" id="viewed" type="checkbox" name="viewed">
+        <label class="form__label viewed-label" for="viewed">Успели посмотреть?</label>
+      </div>
+    </div>
+    <div class="form__btns-wrap">
+      <button class="form__btn submit-btn" id="submit-btn" type="submit">Добавить</button>
+      <button class="form__btn cancel-btn hidden" id="cancel-btn" type="button">Отменить редактирование</button>
+    </div>
+  </form>
+  <!-- select -->
+  <div class="sort-wrap">
+    <select class="sort-select" id="sort-select">
+      <option class="sort-option" value="title">Название</option>
+      <option class="sort-option" value="genre">Жанр</option>
+      <option class="sort-option" value="year">Год</option>
+    </select>
+    <button class="sort-btn" id="sort-btn">Сортировать</button>
+  </div>
+  <!-- table -->
+  <table class="table page__table" id="table">
+    <thead class="table__head">
+      <tr class="table__row header-row">
+        <th class="table__header">Название</th>
+        <th class="table__header">Жанр</th>
+        <th class="table__header">Год</th>
+        <th class="table__header">Успели посмотреть?</th>
+        <th class="table__header">Действия</th>
+      </tr>
+    </thead>
+    <tbody class="table__body" id="table-body"></tbody>
+  </table>
+</body>
+
+</html>
