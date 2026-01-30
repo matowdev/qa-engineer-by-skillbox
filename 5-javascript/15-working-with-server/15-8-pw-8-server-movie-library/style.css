@@ -50,12 +50,12 @@ img {
 .form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-radius: 5px;
   padding: 20px;
   width: 100%;
   max-width: 900px;
-  background-color: #fff;
+  background: #fff;
   box-shadow: 0 0 5px #999;
 }
 
@@ -135,37 +135,66 @@ img {
   background: #858585;
 }
 
-.sort-wrap {
+.filter-delete-wrap {
   display: flex;
-  row-gap: 10px;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  margin-bottom: 25px;
   width: 100%;
   max-width: 900px;
 }
 
-.sort-select {
-  margin-right: 10px;
+.filter__wrap {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+  max-width: 740px;
+  background: #fff;
+  box-shadow: 0 0 5px #999;
+}
+
+.filter__input,
+.filter__select {
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 5px;
+  padding: 8px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
+}
+
+.filter__input {
+  width: 100%;
+  max-width: 170px;
+  caret-color: #e62908;
+}
+
+.filter__input::placeholder {
+  color: #808080;
+}
+
+.filter__select {
+  padding: 7px;
+  width: 100%;
+  max-width: 165px;
   cursor: pointer;
 }
 
-.sort-btn {
-  border: 1px solid #ccc;
+.delete__btn {
+  align-self: self-end;
+  border: 1px solid #757575;
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 5px 10px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   width: 100%;
   max-width: 140px;
-  color: #333;
+  color: #616161;
   background: transparent;
   cursor: pointer;
   transition-property: border-color, color;
@@ -173,9 +202,9 @@ img {
   transition-timing-function: ease-in-out;
 }
 
-.sort-btn:hover {
-  border-color: #3d52a1;
-  color: #3d52a1;
+.delete__btn:hover {
+  border-color: #af2911;
+  color: #af2911;
 }
 
 .table {
@@ -217,14 +246,19 @@ img {
   transition-timing-function: ease-in-out;
 }
 
+.action-delete {
+  border-color: #af2911;
+  color: #af2911;
+}
+
 .action-edit:hover {
   border-color: #757575;
   color: #616161;
 }
 
 .action-delete:hover {
-  border-color: #af2911;
-  color: #af2911;
+  border-color: #e62908;
+  color: #e62908;
 }
 
 .hidden {

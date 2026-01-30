@@ -41,14 +41,23 @@
       <button class="form__btn cancel-btn hidden" id="cancel-btn" type="button">Отменить редактирование</button>
     </div>
   </form>
-  <!-- select -->
-  <div class="sort-wrap">
-    <select class="sort-select" id="sort-select">
-      <option class="sort-option" value="title">Название</option>
-      <option class="sort-option" value="genre">Жанр</option>
-      <option class="sort-option" value="year">Год</option>
-    </select>
-    <button class="sort-btn" id="sort-btn">Сортировать</button>
+  <div class="filter delete filter-delete-wrap page__filter-delete">
+    <!-- filter block -->
+    <div class="filter__wrap">
+      <input class="filter__input" id="filter-title" type="text" name="filter-title" maxlength="55"
+        pattern="^[a-zA-Zа-яА-ЯёЁ0-9\s\-]+$" autocomplete="off" placeholder="Название фильма">
+      <input class="filter__input" id="filter-genre" type="text" name="filter-genre" maxlength="55"
+        pattern="^[a-zA-Zа-яА-ЯёЁ0-9\s\-]+$" autocomplete="off" placeholder="Жанр">
+      <input class="filter__input" id="filter-year" type="number" name="filter-year" step="1" max="2050"
+        placeholder="Год релиза">
+      <select class="filter__select" id="filter-viewed">
+        <option class="filter__option" value="all">Все</option>
+        <option class="filter__option" value="true">Просмотренные</option>
+        <option class="filter__option" value="false">Не просмотренные</option>
+      </select>
+    </div>
+    <!-- delete btn -->
+    <button class="delete__btn delete-all-btn" id="delete-all-btn">Удалить все фильмы</button>
   </div>
   <!-- table -->
   <table class="table page__table" id="table">

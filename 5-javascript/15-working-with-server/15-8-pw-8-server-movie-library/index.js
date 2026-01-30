@@ -7,8 +7,11 @@ const tableBody = document.getElementById('table-body');
 
 const submitBtn = document.getElementById('submit-btn');
 const cancelBtn = document.getElementById('cancel-btn');
-const sortBtn = document.getElementById('sort-btn');
-const sortSelect = document.getElementById('sort-select');
+const filterTitle = document.getElementById('filter-title');
+const filterGenre = document.getElementById('filter-genre');
+const filterYear = document.getElementById('filter-year');
+const filterViewed = document.getElementById('filter-viewed');
+const deleteAllBtn = document.getElementById('delete-all-btn');
 
 let editingId = null;
 
@@ -42,8 +45,15 @@ function resetFormState() {
   cancelBtn.classList.add('hidden');
 }
 
-function renderFilmsTable() {
-  const filmsArr = getFilmsFromStorage();
+function resetFilters() {
+  filterTitle.value = '';
+  filterGenre.value = '';
+  filterYear.value = '';
+  filterViewed.value = 'all';
+}
+
+function renderFilmsTable(filmsList) {
+  const filmsArr = filmsList || getFilmsFromStorage();
 
   tableBody.innerHTML = '';
 
@@ -124,24 +134,35 @@ function handleFormSubmit(event) {
   saveFilmsToStorage(filmsArr);
   renderFilmsTable();
   form.reset();
+  resetFilters(); // очистка фильтрационных полей (возврат к default состояниям)
 }
 
-function sortFilms() {
-  const sortBy = sortSelect.value;
-  const filmsArr = getFilmsFromStorage();
+function filterFilms() {
+  const films = getFilmsFromStorage();
 
-  filmsArr.sort((a, b) => {
-    if (sortBy === 'year') {
-      return a.year - b.year;
-    }
-    if (a[sortBy].toLowerCase() < b[sortBy].toLowerCase()) return -1;
-    if (a[sortBy].toLowerCase() > b[sortBy].toLowerCase()) return 1;
+  const titleValue = filterTitle.value.trim().toLowerCase();
+  const genreValue = filterGenre.value.trim().toLowerCase();
+  const yearValue = filterYear.value.trim();
+  const viewedValue = filterViewed.value; // может быть all, true или false (согласно атрибута value)
 
-    return 0;
+  const filtered = films.filter((film) => {
+    const matchTitle = film.title.toLowerCase().includes(titleValue);
+    const matchGenre = film.genre.toLowerCase().includes(genreValue);
+    const matchYear =
+      yearValue === '' || film.year.toString().startsWith(yearValue); // проверка с первой цифры (а не целиком)
+
+    let matchViewed = true;
+
+    if (viewedValue === 'true') {
+      matchViewed = film.viewed === true;
+    } else if (viewedValue === 'false') {
+      matchViewed = film.viewed === false;
+    } // если viewedValue === 'all', то matchViewed остается true
+
+    return matchTitle && matchGenre && matchYear && matchViewed; // учитываются "все" проверки
   });
 
-  saveFilmsToStorage(filmsArr); // сохранение отсортированного порядка
-  renderFilmsTable(); // перерисовка согласно сортировки
+  renderFilmsTable(filtered); // перерисовка согласно фильтрации
 }
 
 function editFilm(id) {
@@ -183,10 +204,35 @@ function deleteFilm(id) {
   }
 }
 
+function deleteAllFilms() {
+  const films = getFilmsFromStorage();
+
+  if (films.length === 0) {
+    alert('Нечего удалять..');
+    return;
+  }
+
+  const isConfirmed = confirm(
+    'Вы уверены, что хотите удалить ВСЕ фильмы? Это действие нельзя отменить!',
+  );
+
+  if (!isConfirmed) return;
+
+  saveFilmsToStorage([]);
+  renderFilmsTable();
+  resetFormState();
+  form.reset();
+  resetFilters();
+}
+
 renderFilmsTable(); // сразу отрисовка таблицы
 
 form.addEventListener('submit', handleFormSubmit);
-sortBtn.addEventListener('click', sortFilms);
+filterTitle.addEventListener('input', filterFilms);
+filterGenre.addEventListener('input', filterFilms);
+filterYear.addEventListener('input', filterFilms);
+filterViewed.addEventListener('change', filterFilms);
+deleteAllBtn.addEventListener('click', deleteAllFilms);
 
 tableBody.addEventListener('click', (event) => {
   if (event.target.classList.contains('action-edit')) {
