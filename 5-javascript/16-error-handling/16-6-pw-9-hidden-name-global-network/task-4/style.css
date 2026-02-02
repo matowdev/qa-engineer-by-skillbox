@@ -1,0 +1,155 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page {
+  padding: 30px;
+  height: auto;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #333;
+  background: #f4f4f4;
+}
+
+#app {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.topbar-logo {
+  font-weight: bold;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user-email {
+  font-size: 12px;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 12px;
+  padding: 20px;
+  color: #fff;
+  background: #550000;
+}
+
+.error-title {
+  font-weight: bold;
+}
+
+.films {
+  display: grid;
+  margin: 20px 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.films-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+}
+
+.films-card[data-watched="true"] {
+  background: inherit;
+}
+
+.films-card[data-watched="true"]::after {
+  content: "просмотрено";
+  bottom: 4px;
+  left: 20px;
+  font-size: 12px;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px 20px;
+  background: #fff;
+}
+
+.authForm input {
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 8px;
+}
+
+.name-input,
+.email-input {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.authForm-submit {
+  margin-top: 16px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 8px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+  background: #52a252;
+  cursor: pointer;
+}
