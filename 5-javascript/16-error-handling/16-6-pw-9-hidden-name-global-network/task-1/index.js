@@ -7,7 +7,9 @@ function hello() {
 }
 
 try {
-  helo();
-} catch {}
+  helo(); // опечатка.. должно быть hello()
+} catch (error) {
+  console.error('Произошла ошибка:', error);
+}
 
 console.log('complete');

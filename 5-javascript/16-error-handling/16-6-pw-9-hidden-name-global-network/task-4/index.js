@@ -79,7 +79,7 @@ function renderFilms(films) {
   el.classList.add('films');
 
   if (films.length === 0) {
-    el.innerText = 'Cписок фильмов пока пуст';
+    el.innerText = 'Список фильмов пока пуст';
     return el;
   }
 
@@ -163,7 +163,7 @@ async function initApp() {
   } catch (error) {
     console.error(error);
 
-    if ((error.name = 'AuthError')) {
+    if (error.name === 'AuthError') {
       initAuth();
       return;
     }
@@ -173,3 +173,58 @@ async function initApp() {
 }
 
 initApp();
+
+// !! решение
+
+function renderNotification() {
+  let el = document.querySelector('.notification');
+
+  if (!el) {
+    el = document.createElement('div');
+    el.classList.add('notification');
+    document.body.append(el);
+  }
+
+  return el;
+}
+
+function updateNotification(type) {
+  const el = renderNotification();
+
+  el.className = 'notification';
+
+  if (type === 'offline') {
+    el.textContent = 'Неполадки с сетью!';
+    el.classList.add('notification--error');
+  } else if (type === 'slow') {
+    el.textContent = 'Медленное соединение!';
+    el.classList.add('notification--slow');
+  } // если придёт type === null, уведомление просто скроется
+}
+
+async function checkNetwork() {
+  try {
+    const startTime = Date.now();
+
+    await fetch('https://sb-film.skillbox.cc/ping', {
+      method: 'POST',
+    });
+
+    const endTime = Date.now();
+    const duration = endTime - startTime;
+
+    if (duration > 500) {
+      throw new Error('slow');
+    }
+
+    updateNotification(null);
+  } catch (error) {
+    if (error.message === 'slow') {
+      updateNotification('slow');
+    } else {
+      updateNotification('offline');
+    }
+  }
+}
+
+setInterval(checkNetwork, 5000);

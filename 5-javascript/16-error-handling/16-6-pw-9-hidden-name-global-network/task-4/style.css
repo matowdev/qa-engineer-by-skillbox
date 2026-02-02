@@ -153,3 +153,32 @@ img {
   background: #52a252;
   cursor: pointer;
 }
+
+.notification {
+  position: fixed;
+  z-index: 1000;
+  bottom: 50px;
+  left: 50%;
+  display: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.notification--error,
+.notification--slow {
+  display: block;
+}
+
+.notification--error {
+  background-color: #cb1515;
+}
+
+.notification--slow {
+  background-color: #cb6a15;
+}
