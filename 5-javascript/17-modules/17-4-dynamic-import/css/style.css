@@ -1,0 +1,100 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: Arial, Verdana, sans-serif;
+  background-color: rgb(204, 213, 221);
+}
+
+.app {
+  margin: 0 auto;
+  padding: 40px 15px;
+  max-width: 500px;
+}
+
+.card {
+  border-radius: 8px;
+  padding: 30px;
+  background-color: white;
+}
+
+.main-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.desc {
+  margin-top: 0;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  color: white;
+  background-color: rgb(42, 49, 255);
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+.btn:hover {
+  background-color: rgb(59, 65, 255);
+}
+
+.btn:active {
+  background-color: rgb(28, 34, 226);
+}
+
+.center-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.text-field {
+  display: block;
+  border: 1px solid rgb(162, 162, 162);
+  border-radius: 8px;
+  padding: 12px 24px;
+  width: 100%;
+}
+
+.text-field:focus {
+  border-color: rgb(42, 49, 255);
+}
+
+.link {
+  color: gray;
+  transition: color .3s;
+}
+
+.link:hover {
+  color: rgb(42, 49, 255);
+}
