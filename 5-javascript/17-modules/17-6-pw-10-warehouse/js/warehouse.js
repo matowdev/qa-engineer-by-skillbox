@@ -14,6 +14,8 @@ let currentData = [];
 let sortDirectionUpDown = true; // флаг направления сортировки
 
 export default function createWarehousePage(container) {
+  if (!container) return;
+
   currentData = getItems();
 
   const appHeaderWrap = document.createElement('div');
@@ -42,6 +44,11 @@ export default function createWarehousePage(container) {
     tbody.innerHTML = '';
 
     if (data.length === 0) {
+      const allThs = thead.querySelectorAll('th');
+      allThs.forEach((th) => {
+        th.classList.remove('sort-asc', 'sort-desc');
+      }); // очистка от "стрелочек" сортировки
+
       const tr = document.createElement('tr');
       const td = document.createElement('td');
 
@@ -93,11 +100,11 @@ export default function createWarehousePage(container) {
         const numA = parseFloat(a[key]);
         const numB = parseFloat(b[key]);
         return sortDirectionUpDown ? numA - numB : numB - numA;
-      } else {
-        return sortDirectionUpDown
-          ? a[key].localeCompare(b[key])
-          : b[key].localeCompare(a[key]);
       }
+
+      return sortDirectionUpDown
+        ? a[key].localeCompare(b[key])
+        : b[key].localeCompare(a[key]);
     });
 
     renderRows(currentData); // перерисовка

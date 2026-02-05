@@ -88,7 +88,7 @@ img {
 }
 
 .table__header {
-  padding: 15px 25px;
+  padding: 18px 25px;
   font-weight: 500;
   color: #fff;
   background: #333;
@@ -133,13 +133,13 @@ img {
 }
 
 .table__cell {
-  padding: 15px 25px;
+  padding: 10px 25px;
   text-align: start;
   vertical-align: middle;
 }
 
 .table__empty-cell {
-  padding: 20px 25px;
+  padding: 17px 25px;
   font-weight: 500;
   font-size: 18px;
   text-align: center;

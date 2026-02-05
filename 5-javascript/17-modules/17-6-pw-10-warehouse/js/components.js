@@ -83,9 +83,10 @@ function createInput(name, placeholder, options = {}) {
 
     input.addEventListener('input', (event) => {
       const val = event.target.value;
-      if (val.length > 0) {
-        event.target.value = val.charAt(0).toUpperCase() + val.slice(1); // в таблице с заглавной буквы
-      }
+
+      if (!val) return;
+
+      event.target.value = val.charAt(0).toUpperCase() + val.slice(1); // в таблице с заглавной буквы
     });
   }
 

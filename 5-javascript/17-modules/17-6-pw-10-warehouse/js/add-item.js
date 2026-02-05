@@ -3,6 +3,8 @@ import * as UI from './components.js';
 import { addItem } from './storage.js';
 
 export default function createAddPage(container) {
+  if (!container) return;
+
   const titleEl = UI.createTitle('Добавить запись');
   titleEl.classList.add('form-title');
 
@@ -64,6 +66,11 @@ export default function createAddPage(container) {
 
     const nameVal = nameInput.value.trim();
     const shelfVal = shelfInput.value.trim();
+
+    if (!nameVal || !shelfVal || !weightInput.value || !dateInput.value) {
+      alert('Пожалуйста, заполните обязательные поля!');
+      return;
+    }
 
     const newItem = {
       name: nameVal.charAt(0).toUpperCase() + nameVal.slice(1),
