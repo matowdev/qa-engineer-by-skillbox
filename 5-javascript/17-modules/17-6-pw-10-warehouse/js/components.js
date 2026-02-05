@@ -168,6 +168,16 @@ function createTableRow(item, columns, onDelete) {
   return tr;
 }
 
+// создание лоадера
+function createLoader() {
+  const loader = document.createElement('div');
+  loader.classList.add('loader');
+
+  loader.innerHTML = '<div></div><div></div><div></div><div></div>';
+
+  return loader;
+}
+
 export {
   createTitle,
   createBtnWrapper,
@@ -180,4 +190,5 @@ export {
   createTable,
   createTableHeader,
   createTableRow,
+  createLoader,
 };

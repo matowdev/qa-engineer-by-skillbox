@@ -12,7 +12,7 @@ export default function createAddPage(container) {
 
   // паттерны для валидации
   const textPattern = '^[a-zA-Zа-яА-ЯёЁ0-9\\s\\-]+$'; // рус + eng
-  const shelfPattern = '^[a-zA-Z0-9\\s\\-]+$'; // только Eng
+  const shelfPattern = '^[a-zA-Z0-9\\s\\-]+$'; // только eng
 
   // создание обёрток/инпутов
   const nameInput = UI.createInput('name', 'Название', {
@@ -21,7 +21,7 @@ export default function createAddPage(container) {
   });
   const nameGroup = UI.createFormGroup(nameInput);
 
-  const shelfInput = UI.createInput('shelf', 'Полка (eng)', {
+  const shelfInput = UI.createInput('shelf', 'Полка (ENG)', {
     pattern: shelfPattern,
   });
   const shelfGroup = UI.createFormGroup(shelfInput);
