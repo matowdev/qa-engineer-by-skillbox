@@ -41,4 +41,30 @@ img {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+  background: #ccc;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: fit-content;
+}
+
+.gallery__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery__item {
+  display: block;
+}
+
+.gallery__image {
+  display: block;
+  border-radius: 8px;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
 }
