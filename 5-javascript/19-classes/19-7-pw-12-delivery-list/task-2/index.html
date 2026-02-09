@@ -14,6 +14,30 @@
 </head>
 
 <body class="page">
+  <main class="main page__main">
+    <div class="delivery-list main__list" id="delivery-list"></div>
+  </main>
+
+  <div class="popup page__popup" id="popup">
+    <div class="popup__container">
+      <h2 class="popup__title">Изменить</h2>
+      <button class="popup__close-btn" id="close-btn" type="button" title="Закрыть">&times;</button>
+      <form class="popup__form" id="form" action="#" method="get">
+        <input class="popup__input" type="text" name="name" minlength="2" maxlength="55"
+          pattern="^[a-zA-Zа-яА-ЯёЁ0-9\s\-]+$" autocomplete="off" placeholder="Имя" required>
+        <input class="popup__input" type="text" name="address" minlength="5" maxlength="55"
+          pattern="^[a-zA-Zа-яА-ЯёЁ0-9\s\.,\/\-]+$" autocomplete="off" placeholder="Адрес" required>
+        <input class="popup__input" type="number" name="distance" step="1" min="1" max="9999" autocomplete="off"
+          placeholder="Расстояние" required>
+        <select class="popup__select" name="status">
+          <option class="popup__option" value="delivery">Доставляется</option>
+          <option class="popup__option" value="delivered">Доставлен</option>
+          <option class="popup__option" value="canceled">Отменен</option>
+        </select>
+        <button class="popup__submit-btn" id="submit-btn" type="submit">Сохранить</button>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
