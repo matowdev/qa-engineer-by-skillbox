@@ -34,6 +34,8 @@ img {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
   padding: 30px;
   height: auto;
   min-height: 100vh;
@@ -42,4 +44,48 @@ img {
   font-weight: 400;
   font-size: 16px;
   background: #e9e9e9;
+}
+
+.main {
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.delivery-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.delivery-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 12px;
+  padding: 24px;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+}
+
+.delivery-card__group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.delivery-card__label {
+  margin: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.delivery-card__value {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #000;
 }
