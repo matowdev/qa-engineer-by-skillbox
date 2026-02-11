@@ -1,0 +1,39 @@
+/* Vendor */
+/* ------------------------------------ */
+@import "vendor/swiper.scss";
+@import "vendor/tippy.scss";
+
+/* Global */
+/* ------------------------------------ */
+@import "global/_normalize.scss";
+@import "global/_variables";
+@import "global/_mixins";
+@import "global/_fonts";
+@import "global/_reboot";
+@import "global/_container";
+@import "global/_visually-hidden";
+
+
+/* Blocks */
+/* ------------------------------------ */
+@import "blocks/_btn";
+@import "blocks/_header";
+@import "blocks/_location";
+@import "blocks/_basket";
+@import "blocks/_breadcrumbs";
+@import "blocks/_main-menu";
+@import "blocks/_catalog";
+@import "blocks/_catalog-form";
+@import "blocks/_custom-checkbox";
+@import "blocks/_custom-radio";
+@import "blocks/_product-card";
+@import "blocks/_tooltip";
+@import "blocks/_day-products";
+@import "blocks/_description";
+@import "blocks/_faq";
+@import "blocks/_accordion";
+@import "blocks/_questions";
+@import "blocks/_custom-input";
+@import "blocks/_footer";
+@import "blocks/_message";
+

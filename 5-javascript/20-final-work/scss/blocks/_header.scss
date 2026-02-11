@@ -1,0 +1,110 @@
+.header {
+  &__top {
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $color-solitude;
+  }
+
+  &__logo-link {
+    margin: 0 56px 0 0;
+
+    svg {
+      height: 26px;
+      width: 140px;
+    }
+  }
+
+  &__catalog-btn {
+    background-color: transparent;
+    border: 1px solid $color-granny-smith-apple;
+    border-radius: 6px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 40px 0 0;
+  }
+
+  &__catalog-text {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+
+  &__user-list {
+    margin: 0 0 0 auto;
+    display: flex;
+    padding: 0;
+    list-style: none;
+    gap: 20px;
+    position: relative;
+  }
+
+  &__user-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 16.8px;
+    gap: 5px;
+    position: relative;
+
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+
+  &__user-count {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: $color-granny-smith-apple;
+    position: absolute;
+    top: -5px;
+    right: -13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $color-white;
+  }
+
+  &__bottom {
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+  }
+
+  &__contacts {
+    margin: 0 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__btn {
+    width: 170px;
+  }
+
+  &__phone {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+}

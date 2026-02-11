@@ -1,0 +1,65 @@
+.location {
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  gap: 5px;
+  line-height: 19.6px;
+  position: relative;
+
+  $root: &;
+
+  &__city {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    gap: 5px;
+    padding: 0;
+
+    &--active {
+      + #{$root}__sublist {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: all;
+      }
+    }
+  }
+
+  &__sublist {
+    background-color: $color-white;
+    border-radius: 8px;
+    box-shadow: 0 10px 60px 0 #4848481A;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    min-width: 157px;
+    padding: 16px 8px;
+    position: absolute;
+    left: 100px;
+    top: calc(100% + 10px);
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $transition, transform $transition;
+  }
+
+  &__sublink {
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    display: flex;
+    font-size: 12px;
+    line-height: 16.8px;
+    padding: 0;
+    transition: color $transition;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-granny-smith-apple;
+    }
+  }
+}

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Каталог товаров - Briaton</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+
+      <!-- Header - top -->
+      <div class="header__top">
+        <a href="#" class="header__logo-link">
+          <svg class="header__logo" width="140" height="26" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#icon-logo"></use>
+          </svg>
+        </a>
+        <button class="header__catalog-btn" type="button">
+          <svg class="header__logo" width="24" height="24" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#icon-menu"></use>
+          </svg>
+          <span class="header__catalog-text">Каталог</span>
+        </button>
+
+        <!-- Location -->
+        <div class="header__location location">
+          <svg class="location__icon" width="24" height="24" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#icon-location"></use>
+          </svg>
+          <span class="location__text">Ваш город:</span>
+          <button class="location__city" type="button">
+            <span class="location__city-name">Оренбург</span>
+            <svg class="location__arrow" width="9" height="6" aria-hidden="true">
+              <use xlink:href="images/sprite.svg#icon-arrow-bottom"></use>
+            </svg>
+          </button>
+          <ul class="location__sublist">
+            <li class="location__subitem">
+              <button class="location__sublink" type="button">Москва</button>
+            </li>
+            <li class="location__subitem">
+              <button class="location__sublink" type="button">Оренбург</button>
+            </li>
+            <li class="location__subitem">
+              <button class="location__sublink" type="button">Санкт-Петербург</button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- User list -->
+        <ul class="header__user-list">
+          <li class="header__user-item">
+            <button class="header__user-btn" type="button">
+              <span class="header__user-text">Корзина</span>
+              <svg class="header__user-icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-basket"></use>
+              </svg>
+              <span class="header__user-count">2</span>
+            </button>
+
+            <!-- Basket -->
+            <div class="header__basket basket">
+              <ul class="basket__list">
+                <!--
+              <li class="basket__item">
+                <div class="basket__img">
+                  <img src="images/item-1.png" alt="Фотография товара" height="60" width="60">
+                </div>
+                <span class="basket__name">Citilux Идальго CL434321 Бра с выключателем</span>
+                <span class="basket__price">5690 руб</span>
+                <button class="basket__item-close" type="button">
+                  <svg class="main-menu__icon" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#icon-close"></use>
+                  </svg>
+                </button>
+              </li>
+               -->
+              </ul>
+              <!-- <a class="basket__link btn" href="#">Перейти к оформлению</a> -->
+              <div class="basket__empty-block">Корзина пока пуста</div>
+            </div>
+          </li>
+          <li class="header__user-item">
+            <button class="header__user-btn" type="button">
+              <span class="header__user-text">Войти</span>
+              <svg class="header__user-icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-user"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Header - bottom -->
+      <div class="header__bottom">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Отраслевые решения</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Портфолио</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Клиентам</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Партнерам</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <div class="header__contacts">
+          <a href="tel:+78002220037" class="header__phone">+7 (800) 222-00-37</a>
+          <button class="header__btn btn" type="button">Обратный звонок</button>
+        </div>
+      </div>
+
+      <!-- Catalog -->
+      <div class="header__catalog main-menu">
+        <div class="main-menu__wrapper">
+          <div class="main-menu__heading">
+            <h2 class="main-menu__title">Категории товаров</h2>
+            <button class="main-menu__close" type="button">
+              <svg class="main-menu__icon" width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="main-menu__list">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Люстры</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link main-menu__link--active" href="#">Светильники</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Бра и подсветки</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Споты</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Настольные лампы</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Торшеры</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Трековые системы</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Уличное освещение</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Офисное освещение</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Лампочки</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Светодиоидная подсветка</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Предметы инерьера</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Электротовары</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="#">Комплектующие</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Каталог</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">Светильники</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="catalog">
+      <div class="container">
+        <h1 class="catalog__title">Светильники</h1>
+        <div class="catalog__wrapper">
+          <form action="#" method="get" class="catalog-form">
+            <button class="catalog-form__reset" type="reset">
+              <svg width="24" height="24" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-filter"></use>
+              </svg>
+              <span class="catalog-form__reset-text">Сбросить фильтры</span>
+            </button>
+            <fieldset class="catalog-form__fieldset">
+              <legend class="catalog-form__legend">Светильники</legend>
+              <ul class="catalog-form__list-col">
+                <li class="catalog-form__item-col">
+                  <div class="custom-checkbox custom-checkbox--pendant">
+                    <input class="visually-hidden custom-checkbox__field" id="pendant" type="checkbox" name="type"
+                      value="pendant">
+                    <label class="custom-checkbox__label" for="pendant">
+                      <span class="custom-checkbox__name">
+                        Подвесные
+                      </span>
+                      <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-check"></use>
+                      </svg>
+                      <span class="custom-checkbox__count">158</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="catalog-form__item-col">
+                  <div class="custom-checkbox custom-checkbox--ceiling">
+                    <input class="visually-hidden custom-checkbox__field" id="ceiling" type="checkbox" name="type"
+                      value="ceiling">
+                    <label class="custom-checkbox__label" for="ceiling">
+                      <span class="custom-checkbox__name">
+                        Потолочные
+                      </span>
+                      <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-check"></use>
+                      </svg>
+                      <span class="custom-checkbox__count">118</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="catalog-form__item-col">
+                  <div class="custom-checkbox custom-checkbox--overhead">
+                    <input class="visually-hidden custom-checkbox__field" id="overhead" type="checkbox" name="type"
+                      value="overhead">
+                    <label class="custom-checkbox__label" for="overhead">
+                      <span class="custom-checkbox__name">
+                        Накладные
+                      </span>
+                      <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-check"></use>
+                      </svg>
+                      <span class="custom-checkbox__count">463</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="catalog-form__item-col">
+                  <div class="custom-checkbox custom-checkbox--point">
+                    <input class="visually-hidden custom-checkbox__field" id="point" type="checkbox" name="type"
+                      value="point">
+                    <label class="custom-checkbox__label" for="point">
+                      <span class="custom-checkbox__name">
+                        Точечные
+                      </span>
+                      <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-check"></use>
+                      </svg>
+                      <span class="custom-checkbox__count">158</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="catalog-form__item-col">
+                  <div class="custom-checkbox custom-checkbox--nightlights">
+                    <input class="visually-hidden custom-checkbox__field" id="nightlights" type="checkbox" name="type"
+                      value="nightlights">
+                    <label class="custom-checkbox__label" for="nightlights">
+                      <span class="custom-checkbox__name">
+                        Ночники
+                      </span>
+                      <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-check"></use>
+                      </svg>
+                      <span class="custom-checkbox__count">118</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="catalog-form__fieldset">
+              <legend class="catalog-form__legend">Статус</legend>
+              <ul class="catalog-form__list-row">
+                <li class="catalog-form__item-row">
+                  <div class="custom-radio">
+                    <input class="visually-hidden custom-radio__field" id="instock" type="radio" name="status"
+                      value="instock">
+                    <label class="custom-radio__label" for="instock">
+                      <span class="custom-radio__toggle"></span>
+                      <span class="custom-radio__text">В наличии</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="catalog-form__item-row">
+                  <div class="custom-radio">
+                    <input class="visually-hidden custom-radio__field" id="all-item" type="radio" name="status"
+                      value="all-item" checked>
+                    <label class="custom-radio__label" for="all-item">
+                      <span class="custom-radio__toggle"></span>
+                      <span class="custom-radio__text">Все</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+          <div class="catalog__products">
+            <div class="catalog__sort">
+              <p class="catalog__sort-text">Сортировать по:</p>
+              <select class="catalog__sort-select" name="sort">
+                <option value="price-min">Сначала дешёвые</option>
+                <option value="price-max">Сначала дорогие</option>
+                <option value="rating-max">Сначала популярные</option>
+              </select>
+            </div>
+            <ul class="catalog__list">
+              <li class="catalog__item">
+                <div class="product-card">
+                  <div class="product-card__visual">
+                    <img class="product-card__img" src="images/item-1.png" height="436" width="290"
+                      alt="Изображение товара">
+                    <div class="product-card__more">
+                      <a href="#" class="product-card__link btn btn--icon">
+                        <span class="btn__text">В корзину</span>
+                        <svg width="24" height="24" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon-basket"></use>
+                        </svg>
+                      </a>
+                      <a href="#" class="product-card__link btn btn--secondary">
+                        <span class="btn__text">Подробнее</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="product-card__info">
+                    <h2 class="product-card__title">Потолочная люстра Ornella A4059PL-4AB (Artelamp)</h2>
+                    <span class="product-card__old">
+                      <span class="product-card__old-number">15 300</span>
+                      <span class="product-card__old-add">₽</span>
+                    </span>
+                    <span class="product-card__price">
+                      <span class="product-card__price-number">11 540</span>
+                      <span class="product-card__price-add">₽</span>
+                    </span>
+                    <div class="product-card__tooltip tooltip">
+                      <button class="tooltip__btn" aria-label="Показать подсказку">
+                        <svg class="tooltip__icon" width="5" height="10" aria-hidden="true">
+                          <use xlink:href="images/sprite.svg#icon-i"></use>
+                        </svg>
+                      </button>
+                      <div class="tooltip__content">
+                        <span class="tooltip__text">Наличие товара по городам:</span>
+                        <ul class="tooltip__list">
+                          <li class="tooltip__item">
+                            <span class="tooltip__text">Москва: <span class="tooltip__count">454</span></span>
+                          </li>
+                          <li class="tooltip__item">
+                            <span class="tooltip__text">Оренбург: <span class="tooltip__count">381</span></span>
+                          </li>
+                          <li class="tooltip__item">
+                            <span class="tooltip__text">Санкт-Петербург: <span class="tooltip__count">15</span></span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ol class="catalog__pagination">
+              <li class="catalog__pagination-item">
+                <button class="catalog__pagination-link">1</button>
+              </li>
+              <li class="catalog__pagination-item">
+                <button class="catalog__pagination-link">2</button>
+              </li>
+              <li class="catalog__pagination-item">
+                <button class="catalog__pagination-link">3</button>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Товары дня -->
+    <section class="day-products">
+      <div class="container">
+        <div class="day-products__top">
+          <h2 class="day-products__title">Товары дня</h2>
+
+          <!-- Навигация для слайдера -->
+          <div class="day-products__navigation">
+            <button class="day-products__navigation-btn day-products__navigation-btn--prev" disabled type="button">
+              <svg width="41" height="9" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-arrow-prev"></use>
+              </svg>
+            </button>
+            <button class="day-products__navigation-btn day-products__navigation-btn--next" type="button">
+              <svg width="41" height="9" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-arrow-next"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Слайдер -->
+        <div class="day-products__slider swiper">
+          <ul class="day-products__list swiper-wrapper">
+            <li class="day-products__item">
+              <div class="product-card product-card--small">
+                <div class="product-card__visual">
+                  <img class="product-card__img" src="images/item-7.png" height="344" width="290"
+                    alt="Изображение товара">
+                  <div class="product-card__more">
+                    <a href="#" class="product-card__link btn btn--icon">
+                      <span class="btn__text">В корзину</span>
+                      <svg width="24" height="24" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-basket"></use>
+                      </svg>
+                    </a>
+                    <a href="#" class="product-card__link btn btn--secondary">
+                      <span class="btn__text">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="product-card__info">
+                  <h2 class="product-card__title">Потолочная люстра Ornella A4059PL-4AB (Artelamp)</h2>
+                  <span class="product-card__old">
+                    <span class="product-card__old-number">15 300</span>
+                    <span class="product-card__old-add">₽</span>
+                  </span>
+                  <span class="product-card__price">
+                    <span class="product-card__price-number">11 540</span>
+                    <span class="product-card__price-add">₽</span>
+                  </span>
+                  <div class="product-card__tooltip tooltip">
+                    <button class="tooltip__btn" aria-label="Показать подсказку">
+                      <svg class="tooltip__icon" width="5" height="10" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#icon-i"></use>
+                      </svg>
+                    </button>
+                    <div class="tooltip__content">
+                      <span class="tooltip__text">Наличие товара по городам:</span>
+                      <ul class="tooltip__list">
+                        <li class="tooltip__item">
+                          <span class="tooltip__text">Москва: <span class="tooltip__count">454</span></span>
+                        </li>
+                        <li class="tooltip__item">
+                          <span class="tooltip__text">Оренбург: <span class="tooltip__count">381</span></span>
+                        </li>
+                        <li class="tooltip__item">
+                          <span class="tooltip__text">Санкт-Петербург: <span class="tooltip__count">15</span></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Описание компании -->
+    <section class="description">
+      <div class="container">
+        <svg class="description__lamp" width="94" height="94" aria-hidden="true">
+          <use xlink:href="images/sprite.svg#icon-lamp"></use>
+        </svg>
+        <h2 class="visually-hidden">Описание магазина</h2>
+        <div class="description__texts">
+          <p>Накладные светильники можно установить на потолок, пол или стены в соответствии с дизайнерской концепцией.
+            Сфера использования данных осветительных приборов широка. Их успешно применяют для освещения любых
+            помещений: офисов, торговых и бизнес-центров, магазинов, интерьеров сегмента HoReCa и т.д.
+          </p>
+          <p>На нашем сайте в каталоге представлен широкий выбор накладных светильников. В нем вы сможете найти световые
+            приборы различной формы, цвета, размера, стиля и пр. Устанавливая нужные характеристики, нетрудно выбрать
+            подходящую модель. Однако чтобы купить накладные светильники под конкретную задачу, удобнее связаться с
+            менеджерам. Специалисты сделают профессиональный проект освещения, подберут оборудование и при необходимости
+            организуют доставку. Мы реализуем варианты светильников накладных для декоративного, направленного или
+            заливающего освещения. Предлагаются модели с различными источниками света, но максимальное количество
+            вариантов – среди светодиодных светильников.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="container">
+        <div class="faq__wrapper">
+          <h2 class="faq__title">Ответы на частые вопросы от покупателей</h2>
+          <div class="faq__accordion accordion">
+            <div class="accordion__element">
+              <button class="accordion__btn" type="button">
+                <span class="accordion__btn-text">Вы работаете с НДС?</span>
+                <span class="accordion__btn-icon"></span>
+              </button>
+              <div class="accordion__content">
+                <div class="accordion__inner">
+                  <div class="accordion__text">
+                    <p>Вы можете отказаться от покупки. Товар должен быть надлежащего качества. Убедитесь, что сохранён
+                      товарный вид, потребительские свойства, а также имеется документ, подтверждающий покупку товара,
+                      на товаре отсутствуют следы сборки, ухудшающие его товарный вид.</p>
+                    <p>Обращаем Ваше внимание, что расходы на доставку товара в случае возврата или обмена товара
+                      надлежащего качества несет Покупатель.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__element">
+              <button class="accordion__btn" type="button">
+                <span class="accordion__btn-text">Как обменять или вернуть товар надлежащего качества?</span>
+                <span class="accordion__btn-icon"></span>
+              </button>
+              <div class="accordion__content">
+                <div class="accordion__inner">
+                  <div class="accordion__text">
+                    <p>Вы можете отказаться от покупки. Товар должен быть надлежащего качества. Убедитесь, что сохранён
+                      товарный вид, потребительские свойства, а также имеется документ, подтверждающий покупку товара,
+                      на товаре отсутствуют следы сборки, ухудшающие его товарный вид.</p>
+                    <p>Обращаем Ваше внимание, что расходы на доставку товара в случае возврата или обмена товара
+                      надлежащего качества несет Покупатель.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__element">
+              <button class="accordion__btn" type="button">
+                <span class="accordion__btn-text">Как я могу отследить свой заказ?</span>
+                <span class="accordion__btn-icon"></span>
+              </button>
+              <div class="accordion__content">
+                <div class="accordion__inner">
+                  <div class="accordion__text">
+                    <p>Вы можете отказаться от покупки. Товар должен быть надлежащего качества. Убедитесь, что сохранён
+                      товарный вид, потребительские свойства, а также имеется документ, подтверждающий покупку товара,
+                      на товаре отсутствуют следы сборки, ухудшающие его товарный вид.</p>
+                    <p>Обращаем Ваше внимание, что расходы на доставку товара в случае возврата или обмена товара
+                      надлежащего качества несет Покупатель.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__element">
+              <button class="accordion__btn" type="button">
+                <span class="accordion__btn-text">Есть ли доставка в регионы?</span>
+                <span class="accordion__btn-icon"></span>
+              </button>
+              <div class="accordion__content">
+                <div class="accordion__inner">
+                  <div class="accordion__text">
+                    <p>Вы можете отказаться от покупки. Товар должен быть надлежащего качества. Убедитесь, что сохранён
+                      товарный вид, потребительские свойства, а также имеется документ, подтверждающий покупку товара,
+                      на товаре отсутствуют следы сборки, ухудшающие его товарный вид.</p>
+                    <p>Обращаем Ваше внимание, что расходы на доставку товара в случае возврата или обмена товара
+                      надлежащего качества несет Покупатель.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion__element">
+              <button class="accordion__btn" type="button">
+                <span class="accordion__btn-text">Возможно ли получить корпоративную скидку?</span>
+                <span class="accordion__btn-icon"></span>
+              </button>
+              <div class="accordion__content">
+                <div class="accordion__inner">
+                  <div class="accordion__text">
+                    <p>Вы можете отказаться от покупки. Товар должен быть надлежащего качества. Убедитесь, что сохранён
+                      товарный вид, потребительские свойства, а также имеется документ, подтверждающий покупку товара,
+                      на товаре отсутствуют следы сборки, ухудшающие его товарный вид.</p>
+                    <p>Обращаем Ваше внимание, что расходы на доставку товара в случае возврата или обмена товара
+                      надлежащего качества несет Покупатель.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма -->
+    <section class="questions">
+      <div class="container">
+        <div class="questions__wrapper">
+          <h2 class="questions__title">
+            <span class="questions__title-text">Сложно выбрать?</span>
+            <span class="questions__title-text">Обратитесь к нам и мы поможем</span>
+          </h2>
+          <img class="questions__img" src="images/lamp.png" width="253" height="319" alt="Фотография лампы">
+          <p class="questions__text">Эксперты по светотехнике подберут накладные светильники специально под вашу задачу.
+            Вы получите проект освещения и профессиональную консультацию бесплатно.</p>
+          <form action="#" method="POST" class="questions__form">
+            <div class="questions__inner">
+              <div class="custom-input">
+                <label for="name" class="custon-input__label">Ваше имя</label>
+                <input type="text" class="custom-input__field" id="name" placeholder="Светлана">
+              </div>
+              <div class="custom-input">
+                <label for="email" class="custon-input__label">Ваша почта</label>
+                <input type="email" class="custom-input__field" id="email" placeholder="example@example.com">
+              </div>
+              <button class="questions__btn btn btn--big" type="submit">Отправить заявку</button>
+            </div>
+            <div class="custom-checkbox">
+              <input class="visually-hidden custom-checkbox__field" id="agree" type="checkbox" name="pendant">
+              <label class="custom-checkbox__label" for="agree">
+                <span class="custom-checkbox__name">Я согласен с политикой конфиденциальности</span>
+                <svg class="custom-checkbox__icon" width="10" height="10" aria-hidden="true">
+                  <use xlink:href="images/sprite.svg#icon-check"></use>
+                </svg>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__main">
+        <a class="footer__logo-link" href="#">
+          <svg class="footer__logo" width="180" height="33" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#icon-logo-black"></use>
+          </svg>
+        </a>
+        <div class="footer__menu">
+          <div class="footer__box">
+            <div class="footer__contact">
+              <span class="footer__name">Адрес:</span>
+              <span class="footer__contact-link">г. Москва, Нижний проезд, 25/3</span>
+            </div>
+            <div class="footer__contact">
+              <span class="footer__name">Контакты:</span>
+              <a class="footer__contact-link" href="mailto:infobriaton@group.ru">infobriaton@group.ru</a>
+              <a class="footer__contact-link" href="tel:+78002220037">+7 (800) 222-00-37</a>
+            </div>
+          </div>
+          <div class="footer__social">
+            <span class="footer__name">Присоединяйтесь к нам:</span>
+            <ul class="footer__social-list">
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#">Дзен</a>
+              </li>
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#">Одноклассники</a>
+              </li>
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#">Pinterest</a>
+              </li>
+              <li class="footer__social-item">
+                <a class="footer__social-link" href="#">Вконтакте</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__info">
+          <button class="footer__btn btn">Свяжитесь с нами</button>
+          <ul class="footer__cards">
+            <li class="footer__card">
+              <svg class="footer__logo" width="44" height="15" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-visa"></use>
+              </svg>
+            </li>
+            <li class="footer__card">
+              <svg class="footer__logo" width="34" height="22" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-mc"></use>
+              </svg>
+            </li>
+            <li class="footer__card">
+              <svg class="footer__logo" width="66" height="19" aria-hidden="true">
+                <use xlink:href="images/sprite.svg#icon-mir"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__policy">
+          <a class="footer__policy-link" href="#">Политика обработки персональных данных</a>
+          <a class="footer__policy-link" href="#">Политика конфиденциальности</a>
+        </div>
+        <span class="footer__copyright">© ООО "Бриатон"</span>
+        <a class="footer__develop" href="https://affarts.ru/">
+          <span class="footer__develop-text">Дизайн сделан в</span>
+          <svg class="footer__develop-logo" width="62" height="18" aria-hidden="true">
+            <use xlink:href="images/sprite.svg#icon-affarts"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/vendor/swiper.js"></script>
+  <script src="./js/vendor/just-validate.js"></script>
+  <script src="./js/vendor/popprjs.min.js"></script>
+  <script src="./js/vendor/tippy.min.js"></script>
+  <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>

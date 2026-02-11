@@ -1,0 +1,342 @@
+[
+  {
+    "id": 1,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 11540,
+      "old": 15300
+    },
+    "image": "../images/item-1.png",
+    "availability": {
+      "moscow": 10,
+      "orenburg": 20,
+      "saintPetersburg": 17
+    },
+    "type": ["pendant", "nightlights"],
+    "rating": 30,
+    "goodsOfDay": true
+  },
+  {
+    "id": 2,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 10540,
+      "old": 17300
+    },
+    "image": "../images/item-2.png",
+    "availability": {
+      "moscow": 0,
+      "orenburg": 0,
+      "saintPetersburg": 0
+    },
+    "type": ["pendant", "nightlights"],
+    "rating": 450,
+    "goodsOfDay": false
+  },
+  {
+    "id": 3,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 14555,
+      "old": 22300
+    },
+    "image": "../images/item-3.png",
+    "availability": {
+      "moscow": 10,
+      "orenburg": 20,
+      "saintPetersburg": 17
+    },
+    "type": ["pendant", "overhead", "point"],
+    "rating": 11,
+    "goodsOfDay": true
+  },
+  {
+    "id": 4,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 6540,
+      "old": 10300
+    },
+    "image": "../images/item-4.png",
+    "availability": {
+      "moscow": 0,
+      "orenburg": 0,
+      "saintPetersburg": 0
+    },
+    "type": ["pendant", "ceiling"],
+    "rating": 285,
+    "goodsOfDay": false
+  },
+  {
+    "id": 5,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 8540,
+      "old": 12300
+    },
+    "image": "../images/item-5.png",
+    "availability": {
+      "moscow": 10,
+      "orenburg": 20,
+      "saintPetersburg": 17
+    },
+    "type": ["pendant", "ceiling", "overhead"],
+    "rating": 23,
+    "goodsOfDay": true
+  },
+  {
+    "id": 6,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 17540,
+      "old": 27300
+    },
+    "image": "../images/item-6.png",
+    "availability": {
+      "moscow": 15,
+      "orenburg": 25,
+      "saintPetersburg": 13
+    },
+    "type": ["pendant", "nightlights"],
+    "rating": 75,
+    "goodsOfDay": false
+  },
+  {
+    "id": 7,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 12540,
+      "old": 16300
+    },
+    "image": "../images/item-7.png",
+    "availability": {
+      "moscow": 10,
+      "orenburg": 20,
+      "saintPetersburg": 17
+    },
+    "type": ["nightlights"],
+    "rating": 79,
+    "goodsOfDay": true
+  },
+  {
+    "id": 8,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 12999,
+      "old": 17300
+    },
+    "image": "../images/item-8.png",
+    "availability": {
+      "moscow": 0,
+      "orenburg": 0,
+      "saintPetersburg": 0
+    },
+    "type": ["pendant", "ceiling"],
+    "rating": 97,
+    "goodsOfDay": false
+  },
+  {
+    "id": 9,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 18540,
+      "old": 19800
+    },
+    "image": "../images/item-9.png",
+    "availability": {
+      "moscow": 10,
+      "orenburg": 20,
+      "saintPetersburg": 17
+    },
+    "type": ["overhead"],
+    "rating": 99,
+    "goodsOfDay": true
+  },
+  {
+    "id": 10,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 12540,
+      "old": 14300
+    },
+    "image": "../images/item-10.png",
+    "availability": {
+      "moscow": 15,
+      "orenburg": 112,
+      "saintPetersburg": 13
+    },
+    "type": ["pendant", "nightlights"],
+    "rating": 123,
+    "goodsOfDay": false
+  },
+  {
+    "id": 11,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 10540,
+      "old": 17300
+    },
+    "image": "../images/item-11.png",
+    "availability": {
+      "moscow": 10,
+      "orenburg": 20,
+      "saintPetersburg": 17
+    },
+    "type": ["pendant"],
+    "rating": 58,
+    "goodsOfDay": true
+  },
+  {
+    "id": 12,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 11540,
+      "old": 13300
+    },
+    "image": "../images/item-12.png",
+    "availability": {
+      "moscow": 0,
+      "orenburg": 0,
+      "saintPetersburg": 0
+    },
+    "type": ["pendant"],
+    "rating": 584,
+    "goodsOfDay": false
+  },
+  {
+    "id": 13,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 22540,
+      "old": 32300
+    },
+    "image": "../images/item-13.png",
+    "availability": {
+      "moscow": 10,
+      "orenburg": 20,
+      "saintPetersburg": 17
+    },
+    "type": ["point", "nightlights"],
+    "rating": 125,
+    "goodsOfDay": true
+  },
+  {
+    "id": 14,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 14540,
+      "old": 15300
+    },
+    "image": "../images/item-14.png",
+    "availability": {
+      "moscow": 15,
+      "orenburg": 25,
+      "saintPetersburg": 13
+    },
+    "type": ["pendant"],
+    "rating": 536,
+    "goodsOfDay": false
+  },
+  {
+    "id": 15,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 18540,
+      "old": 25300
+    },
+    "image": "../images/item-15.png",
+    "availability": {
+      "moscow": 10,
+      "orenburg": 20,
+      "saintPetersburg": 17
+    },
+    "type": ["pendant", "nightlights"],
+    "rating": 364,
+    "goodsOfDay": true
+  },
+  {
+    "id": 16,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 19540,
+      "old": 24300
+    },
+    "image": "../images/item-16.png",
+    "availability": {
+      "moscow": 15,
+      "orenburg": 228,
+      "saintPetersburg": 13
+    },
+    "type": ["ceiling"],
+    "rating": 30,
+    "goodsOfDay": false
+  },
+  {
+    "id": 17,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 8540,
+      "old": 15300
+    },
+    "image": "../images/item-1.png",
+    "availability": {
+      "moscow": 10,
+      "orenburg": 20,
+      "saintPetersburg": 17
+    },
+    "type": ["pendant", "ceiling", "nightlights"],
+    "rating": 312,
+    "goodsOfDay": true
+  },
+  {
+    "id": 18,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 6540,
+      "old": 14300
+    },
+    "image": "../images/item-2.png",
+    "availability": {
+      "moscow": 15,
+      "orenburg": 25,
+      "saintPetersburg": 13
+    },
+    "type": ["pendant", "nightlights"],
+    "rating": 318,
+    "goodsOfDay": false
+  },
+  {
+    "id": 19,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 10540,
+      "old": 18300
+    },
+    "image": "../images/item-3.png",
+    "availability": {
+      "moscow": 10,
+      "orenburg": 20,
+      "saintPetersburg": 17
+    },
+    "type": ["overhead", "point", "nightlights"],
+    "rating": 87,
+    "goodsOfDay": true
+  },
+  {
+    "id": 20,
+    "name": "Потолочная люстра Ornella A4059PL-4AB (Artelamp)",
+    "price": {
+      "new": 12240,
+      "old": 17800
+    },
+    "image": "../images/item-4.png",
+    "availability": {
+      "moscow": 15,
+      "orenburg": 25,
+      "saintPetersburg": 13
+    },
+    "type": ["pendant", "ceiling"],
+    "rating": 378,
+    "goodsOfDay": false
+  }
+]

@@ -1,0 +1,25 @@
+.breadcrumbs {
+  margin: 20px 0 60px 0;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.6px;
+    color: #000000;
+
+    &:not(span) {
+      color: $color-fern;
+      padding: 0 15px 0 0;
+      border-right: 1px solid $color-solitude;
+    }
+  }
+}

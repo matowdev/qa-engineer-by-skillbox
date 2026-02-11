@@ -1,0 +1,32 @@
+.btn {
+  padding: 12px;
+  background-color: $color-granny-smith-apple;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  justify-content: center;
+
+  &--secondary {
+    background-color: transparent;
+    border: 1px solid $color-vista-blue;
+  }
+
+  &--big {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25.2px;
+    padding: 15px 12px;
+  }
+
+  &--icon {
+    gap: 16px;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+  }
+}

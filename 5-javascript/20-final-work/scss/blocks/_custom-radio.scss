@@ -1,0 +1,60 @@
+.custom-radio {
+  position: relative;
+  $root: &;
+
+  &__field:checked {
+    ~ #{$root}__label {
+      #{$root}__toggle {
+        background-color: $color-granny-smith-apple;
+
+        &::after {
+          left: calc(100% - 17px);
+        }
+      }
+    }
+  }
+
+  &__label {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 19.6px;
+    padding: 30px 0 0;
+    position: relative;
+    transition: opacity $transition;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 0.7;
+    }
+
+  }
+
+  &__toggle {
+    background-color: $color-solitude;
+    border-radius: 12px;
+    height: 20px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transition: background-color $transition;
+    width: 40px;
+
+    &::after {
+      background-color: $color-white;
+      border-radius: 50%;
+      content: "";
+      height: 14px;
+      left: 3px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: left $transition, right $transition;
+      width: 14px;
+    }
+  }
+}

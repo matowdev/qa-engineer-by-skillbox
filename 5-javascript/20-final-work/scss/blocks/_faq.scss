@@ -1,0 +1,14 @@
+.faq {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 672px;
+    gap: 69px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46.8px;
+  }
+}

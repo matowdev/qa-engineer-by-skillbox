@@ -1,0 +1,26 @@
+.description {
+  padding: 124px 0 70px;
+  position: relative;
+  border-top: 1px solid $color-dark-gray;
+
+  &__lamp {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__texts {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+
+    p {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin: 0 0 40px 0;
+      }
+    }
+  }
+}
