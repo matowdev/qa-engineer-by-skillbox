@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   initLocation();
   initAccordion();
   initFormValidation();
-  
+
   // Эти модули асинхронные, так как загружают данные
   await initCatalog();
   await initSlider();

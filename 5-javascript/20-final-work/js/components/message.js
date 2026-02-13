@@ -27,11 +27,16 @@ export const showMessage = (title, text, isError = false) => {
   `;
 
   document.body.appendChild(messageEl);
+
+  // Компенсация ширины скроллбара для предотвращения "прыжка" верстки
+  const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+  document.body.style.paddingRight = `${scrollBarWidth}px`;
   document.body.style.overflow = 'hidden';
 
   const closeMessage = () => {
     messageEl.remove();
     document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
   };
 
   const closeBtn = messageEl.querySelector('.message__close');

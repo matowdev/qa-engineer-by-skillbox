@@ -10,7 +10,7 @@ export const initFormValidation = () => {
     .addField('#name', [
       {
         rule: 'required',
-        errorMessage: 'Введите имя',
+        errorMessage: 'Введите ваше имя',
       },
       {
         rule: 'minLength',
@@ -26,17 +26,17 @@ export const initFormValidation = () => {
     .addField('#email', [
       {
         rule: 'required',
-        errorMessage: 'Введите почту',
+        errorMessage: 'Введите вашу почту',
       },
       {
         rule: 'email',
-        errorMessage: 'Некорректный email',
+        errorMessage: 'Почта введена неверно',
       },
     ])
     .addField('#agree', [
       {
         rule: 'required',
-        errorMessage: 'Нужно согласие',
+        errorMessage: 'Согласие обязательно',
       },
     ])
     .onSuccess(async (event) => {
@@ -44,7 +44,7 @@ export const initFormValidation = () => {
       const data = Object.fromEntries(formData.entries());
 
       try {
-        const response = await fetch('https://httpbin.org/post', {
+        const response = await fetch(event.target.action, {
           method: 'POST',
           body: JSON.stringify(data),
           headers: {
@@ -53,13 +53,20 @@ export const initFormValidation = () => {
         });
 
         if (response.ok) {
-          showMessage('Заявка отправлена', 'Благодарим за обращение! Мы получили вашу заявку и свяжемся с вами в ближайшее время');
+          showMessage(
+            'Заявка отправлена',
+            'Благодарим за обращение! Мы получили вашу заявку и свяжемся с вами в ближайшее время',
+          );
           event.target.reset();
         } else {
           throw new Error('Server error');
         }
       } catch (error) {
-        showMessage('Ошибка отправки', 'Что-то пошло не так, попробуйте отправить форму еще раз. Если ошибка повторится — свяжитесь со службой поддержки.', true);
+        showMessage(
+          'Ошибка отправки',
+          'Что-то пошло не так, попробуйте отправить форму еще раз. Если ошибка повторится — свяжитесь со службой поддержки.',
+          true,
+        );
       }
     });
 };
