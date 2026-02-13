@@ -36,7 +36,7 @@
   &__item {
     display: grid;
     gap: 20px;
-    grid-template-columns: 60px 170px 76px 20px;
+    grid-template-columns: 60px 170px 76px 24px;
     align-items: center;
     font-size: 14px;
     font-weight: 500;
@@ -45,13 +45,18 @@
 
   &__close {
     padding: 0;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     background-color: transparent;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity $transition;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &__img {

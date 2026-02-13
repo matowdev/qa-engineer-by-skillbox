@@ -1270,6 +1270,7 @@ template {
 body {
   display: flex;
   flex-direction: column;
+  min-width: 992px;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -1566,7 +1567,7 @@ button {
 .basket__item {
   display: grid;
   gap: 20px;
-  grid-template-columns: 60px 170px 76px 20px;
+  grid-template-columns: 60px 170px 76px 24px;
   align-items: center;
   font-size: 14px;
   font-weight: 500;
@@ -1575,13 +1576,18 @@ button {
 
 .basket__close {
   padding: 0;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-color: transparent;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity ease-in 0.3s;
+}
+
+.basket__close:hover {
+  opacity: 0.7;
 }
 
 .basket__img {
@@ -1758,6 +1764,7 @@ button {
   font-weight: 400;
   line-height: 22.4px;
   color: #9BE198;
+  cursor: pointer;
   border: none;
 }
 
@@ -2545,37 +2552,65 @@ button {
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 100;
 }
 
 .message__content {
-  width: 400px;
-  min-height: 200px;
+  width: 750px;
+  min-height: 280px;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 24px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
-  padding: 40px;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 36px;
+  padding: 50px 60px;
+  text-align: left;
+}
+
+.message__icon {
+  margin-bottom: 20px;
+}
+
+.message__title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 34px;
+  margin: 0 0 16px 0;
+  color: #000000;
+}
+
+.message__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0;
+  color: #000000;
+}
+
+.message--error .message__text {
+  color: #000000;
 }
 
 .message__close {
   padding: 0;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-color: transparent;
   border: none;
-  top: 10px;
-  right: 10px;
+  top: 25px;
+  right: 25px;
   position: absolute;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.message__close:hover {
+  opacity: 0.6;
 }
 
 /*# sourceMappingURL=style.css.map */

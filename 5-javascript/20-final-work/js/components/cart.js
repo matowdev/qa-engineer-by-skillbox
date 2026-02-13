@@ -1,4 +1,5 @@
 import { getProducts } from './api.js';
+import { showMessage } from './message.js';
 
 export const initCart = async () => {
   const cartBtn = document.querySelector('.header__user-btn');
@@ -18,14 +19,14 @@ export const initCart = async () => {
   };
 
   const updateCart = () => {
-    cartList.innerHTML = cartData.map((item) => `
-      <li class="basket__item" data-id="${item.id}">
+    cartList.innerHTML = cartData.map((item, index) => `
+      <li class="basket__item" data-index="${index}">
         <div class="basket__img">
           <img src="${item.image.replace('../', '')}" alt="${item.name}" height="60" width="60">
         </div>
         <span class="basket__name">${item.name}</span>
         <span class="basket__price">${item.price.new.toLocaleString()} руб</span>
-        <button class="basket__item-close" type="button">
+        <button class="basket__close" type="button">
           <svg width="24" height="24" aria-hidden="true">
             <use xlink:href="images/sprite.svg#icon-close"></use>
           </svg>
@@ -47,13 +48,23 @@ export const initCart = async () => {
   const addToCart = (id) => {
     const product = products.find((p) => p.id === parseInt(id));
     if (product) {
-      cartData.push(product);
-      updateCart();
+      // Считаем общее количество в наличии
+      const totalAvailable = Object.values(product.availability).reduce((acc, curr) => acc + curr, 0);
+      
+      // Считаем сколько уже в корзине
+      const inCartCount = cartData.filter(item => item.id === product.id).length;
+
+      if (inCartCount < totalAvailable) {
+        cartData.push(product);
+        updateCart();
+      } else {
+        showMessage('Не удалось добавить товар', `К сожалению, "${product.name}" закончился на складе (доступно: ${totalAvailable} шт.)`, true);
+      }
     }
   };
 
-  const removeFromCart = (id) => {
-    cartData = cartData.filter((item) => item.id !== parseInt(id));
+  const removeFromCart = (index) => {
+    cartData.splice(index, 1);
     updateCart();
   };
 
@@ -68,16 +79,16 @@ export const initCart = async () => {
       addToCart(id);
     }
 
-    const removeBtn = e.target.closest('.basket__item-close');
+    const removeBtn = e.target.closest('.basket__close');
     if (removeBtn) {
-      const id = removeBtn.closest('.basket__item').dataset.id;
-      removeFromCart(id);
+      const index = removeBtn.closest('.basket__item').dataset.index;
+      removeFromCart(parseInt(index));
     }
   });
 
   // Закрытие корзины при клике вне её
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.header__user-item') && !e.target.closest('.basket__item-close')) {
+    if (!e.target.closest('.header__user-item') && !e.target.closest('.basket__close')) {
       cartMenu.classList.remove('basket--active');
     }
   });

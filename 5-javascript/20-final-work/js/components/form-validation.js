@@ -53,13 +53,13 @@ export const initFormValidation = () => {
         });
 
         if (response.ok) {
-          showMessage('Заявка успешно отправлена!');
+          showMessage('Заявка отправлена', 'Благодарим за обращение! Мы получили вашу заявку и свяжемся с вами в ближайшее время');
           event.target.reset();
         } else {
           throw new Error('Server error');
         }
       } catch (error) {
-        showMessage('Произошла ошибка при отправке формы', true);
+        showMessage('Ошибка отправки', 'Что-то пошло не так, попробуйте отправить форму еще раз. Если ошибка повторится — свяжитесь со службой поддержки.', true);
       }
     });
 };
