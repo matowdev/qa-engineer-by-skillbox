@@ -1,5 +1,6 @@
 import { renderCard } from './render-card.js';
 import { getProducts } from './api.js';
+import { initTooltips } from './tooltip.js';
 
 export const initSlider = async () => {
   const sliderWrapper = document.querySelector('.day-products__list');
@@ -8,11 +9,17 @@ export const initSlider = async () => {
   const products = await getProducts();
   const dayProducts = products.filter((p) => p.goodsOfDay);
 
-  sliderWrapper.innerHTML = dayProducts.map((product) => `
+  sliderWrapper.innerHTML = dayProducts
+    .map(
+      (product) => `
     <li class="day-products__item swiper-slide">
       ${renderCard(product, 'product-card--small')}
     </li>
-  `).join('');
+  `,
+    )
+    .join('');
+
+  initTooltips();
 
   if (window.Swiper) {
     new Swiper('.day-products__slider', {

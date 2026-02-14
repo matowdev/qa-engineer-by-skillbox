@@ -1,5 +1,6 @@
 import { renderCard } from './render-card.js';
 import { getProducts } from './api.js';
+import { initTooltips } from './tooltip.js';
 
 export const initCatalog = async () => {
   const catalogList = document.querySelector('.catalog__list');
@@ -22,11 +23,15 @@ export const initCatalog = async () => {
   };
 
   const updateFilterCounts = () => {
-    const checkboxes = filterForm.querySelectorAll('.custom-checkbox__field[name="type"]');
+    const checkboxes = filterForm.querySelectorAll(
+      '.custom-checkbox__field[name="type"]',
+    );
     checkboxes.forEach((checkbox) => {
       const type = checkbox.value;
       const count = allProducts.filter((p) => p.type.includes(type)).length;
-      const countElement = checkbox.closest('.custom-checkbox').querySelector('.custom-checkbox__count');
+      const countElement = checkbox
+        .closest('.custom-checkbox')
+        .querySelector('.custom-checkbox__count');
       if (countElement) {
         countElement.textContent = count;
       }
@@ -34,16 +39,26 @@ export const initCatalog = async () => {
   };
 
   const applyFiltersAndSort = () => {
-    const checkedTypes = Array.from(filterForm.querySelectorAll('.custom-checkbox__field[name="type"]:checked')).map((cb) => cb.value);
-    const status = filterForm.querySelector('.custom-radio__field[name="status"]:checked').value;
+    const checkedTypes = Array.from(
+      filterForm.querySelectorAll(
+        '.custom-checkbox__field[name="type"]:checked',
+      ),
+    ).map((cb) => cb.value);
+    const status = filterForm.querySelector(
+      '.custom-radio__field[name="status"]:checked',
+    ).value;
     const sortBy = sortSelect.value;
 
     filteredProducts = allProducts.filter((product) => {
-      const typeMatch = checkedTypes.length === 0 || product.type.some((t) => checkedTypes.includes(t));
-      
+      const typeMatch =
+        checkedTypes.length === 0 ||
+        product.type.some((t) => checkedTypes.includes(t));
+
       let statusMatch = true;
       if (status === 'instock') {
-        statusMatch = Object.values(product.availability).some((count) => count > 0);
+        statusMatch = Object.values(product.availability).some(
+          (count) => count > 0,
+        );
       }
 
       return typeMatch && statusMatch;
@@ -67,11 +82,15 @@ export const initCatalog = async () => {
     const end = start + itemsPerPage;
     const pageProducts = filteredProducts.slice(start, end);
 
-    catalogList.innerHTML = pageProducts.map((product) => `
+    catalogList.innerHTML = pageProducts
+      .map(
+        (product) => `
       <li class="catalog__item">
         ${renderCard(product)}
       </li>
-    `).join('');
+    `,
+      )
+      .join('');
 
     renderPagination();
     initTooltips();
@@ -95,21 +114,6 @@ export const initCatalog = async () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
       paginationList.appendChild(li);
-    }
-  };
-
-  const initTooltips = () => {
-    if (window.tippy) {
-      tippy('.tooltip__btn', {
-        content(reference) {
-          const content = reference.nextElementSibling;
-          return content.innerHTML;
-        },
-        allowHTML: true,
-        interactive: true,
-        theme: 'lightwhite',
-        placement: 'top-end',
-      });
     }
   };
 

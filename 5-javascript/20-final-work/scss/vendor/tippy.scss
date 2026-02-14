@@ -35,12 +35,13 @@
 .tippy-backdrop + .tippy-content[data-state=hidden] {opacity: 0}
 
 .tippy-content {
-  padding: 16px 8px;
+  padding: 16px 20px;
 }
 
 .tippy-box[data-theme~='lightwhite'] {
   background-color: #FFFFFF;
   color: #000000;
-  box-shadow: 0 10px 60px 0 rgba(72, 72, 72, 0.1);
+  box-shadow: 0 10px 30px 0 rgba(72, 72, 72, 0.15);
   border-radius: 8px;
+  width: 224px;
 }

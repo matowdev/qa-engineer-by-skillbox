@@ -19,7 +19,9 @@ export const initCart = async () => {
   };
 
   const updateCart = () => {
-    cartList.innerHTML = cartData.map((item, index) => `
+    cartList.innerHTML = cartData
+      .map(
+        (item, index) => `
       <li class="basket__item" data-index="${index}">
         <div class="basket__img">
           <img src="${item.image.replace('../', '')}" alt="${item.name}" height="60" width="60">
@@ -32,10 +34,12 @@ export const initCart = async () => {
           </svg>
         </button>
       </li>
-    `).join('');
+    `,
+      )
+      .join('');
 
     cartCounter.textContent = cartData.length;
-    
+
     if (cartData.length > 0) {
       emptyBlock.style.display = 'none';
       if (checkoutBtn) checkoutBtn.style.display = 'flex';
@@ -49,16 +53,25 @@ export const initCart = async () => {
     const product = products.find((p) => p.id === parseInt(id));
     if (product) {
       // Считаем общее количество в наличии
-      const totalAvailable = Object.values(product.availability).reduce((acc, curr) => acc + curr, 0);
-      
+      const totalAvailable = Object.values(product.availability).reduce(
+        (acc, curr) => acc + curr,
+        0,
+      );
+
       // Считаем сколько уже в корзине
-      const inCartCount = cartData.filter(item => item.id === product.id).length;
+      const inCartCount = cartData.filter(
+        (item) => item.id === product.id,
+      ).length;
 
       if (inCartCount < totalAvailable) {
         cartData.push(product);
         updateCart();
       } else {
-        showMessage('Не удалось добавить товар', `К сожалению, "${product.name}" закончился на складе (доступно: ${totalAvailable} шт.)`, true);
+        showMessage(
+          'Не удалось добавить товар',
+          `К сожалению, "${product.name}" закончился на складе (доступно: ${totalAvailable} шт.)`,
+          true,
+        );
       }
     }
   };
@@ -88,7 +101,10 @@ export const initCart = async () => {
 
   // Закрытие корзины при клике вне её
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.header__user-item') && !e.target.closest('.basket__close')) {
+    if (
+      !e.target.closest('.header__user-item') &&
+      !e.target.closest('.basket__close')
+    ) {
       cartMenu.classList.remove('basket--active');
     }
   });
