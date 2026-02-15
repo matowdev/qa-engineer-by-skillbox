@@ -93,7 +93,7 @@ export const initCatalog = async () => {
       .join('');
 
     renderPagination();
-    initTooltips();
+    initTooltips('.catalog__list .tooltip__btn');
   };
 
   const renderPagination = () => {

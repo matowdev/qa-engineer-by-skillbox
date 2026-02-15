@@ -19,7 +19,7 @@ export const initSlider = async () => {
     )
     .join('');
 
-  initTooltips();
+  initTooltips('.day-products__item .tooltip__btn');
 
   if (window.Swiper) {
     new Swiper('.day-products__slider', {
